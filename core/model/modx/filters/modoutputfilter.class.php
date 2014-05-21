@@ -640,6 +640,11 @@ class modOutputFilter {
                             $haystack = explode(',', $m_val);
                             $condition[]= intval(in_array($output, $haystack));
                             break;
+                        case 'int':
+                        case 'integer':
+                        case 'number':
+                            $output = (int) $output;
+                            break;
 
 
                         /* Default, custom modifier (run snippet with modifier name) */
